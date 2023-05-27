@@ -83,11 +83,10 @@
 
     <!---HEADER-->
 
-    <div class="p-2 text-white text-center" style="background-color:#101e4a">
+    <div class="p-3 text-white text-center" style="background-color:#101e4a">
         <div class="img" >
-            <img src="LOGO.png" alt="Rocket Dog Logo" style="width:200px; height: 200px;">
+            <img src="LOGO.png" alt="Rocket Dog Logo" type="button" href="#" style="width:200px; height: 200px;">
         </div>
-        <p class="fw-bold">YOUR TRUSTED PET TRANSPORT SERVICES GROUP</p> 
     </div>
 
     <!---NAV BAR-->
@@ -96,7 +95,7 @@
         <div class="container-fluid">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="form.html">REQUEST QUOTE</a>
+              <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#myModal">BOOK NOW</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">SERVICES</a>
@@ -106,18 +105,21 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT US</a>
+              <a class="nav-link" href="#aboutUs">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
+              <a class="nav-link" href="#contact">CONTACT</a>
             </li>
           </ul>
           
-        </div>
-        <!--<form class="me-4 d-flex">
-            <input class="form-control" type="text" placeholder="Search">&nbsp;&nbsp;
-            <button class="btn btn-primary fw-bold" type="button">Search</button>
-        </form>-->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">LOG-IN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SIGN-UP</a>
+          </li>
+        </ul>
     </nav>
 
     <!----CAROUSEL-->
@@ -160,7 +162,67 @@
           </div>
           -->
           <div class="container d-flex" id="bookBtn">
-              <button type="button" class="btn btn-lg btn-outline-light fw-bold">BOOK NOW</button>
+              <button type="button" class="btn btn-lg btn-outline-light fw-bold text-center" data-bs-toggle="modal" data-bs-target="#myModal">BOOK NOW</button>
+          </div>
+          <!--modal-->
+          <div class="modal fade" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">RocketDOG</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-2 needs-validation" novalidate>
+                                  <div class="col-md-6">
+                                      <label for="validationCustom01" class="form-label">First Name</label>
+                                      <input type="text" class="form-control" id="validationCustom01" required>
+                                      <div class="valid-feedback">Looks good!</div>
+                                      <div class="invalid-feedback">
+                                        Please provide you First Name.
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom02" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="validationCustom02" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">
+                                      Please provide you Last Name.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom03" class="form-label">E-mail</label>
+                                    <input type="text" class="form-control" id="validationCustom03"  required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid email.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom04" class="form-label">Contact Number</label>
+                                    <input type="text-number" class="form-control" id="validationCustom04"  required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid contact number.
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                      <div class="form-check">
+                                          <div class="container mt-4">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                            <label class="form-check-label" for="invalidCheck">
+                                                Agree to terms and conditions
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                You must agree before submitting.
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <button class="btn btn-primary mt-3" type="submit">SUBMIT FORM</button>
+                            </form>
+                        </div>
+                  </div>
+              </div>
+
           </div>
 
         </div>
@@ -245,7 +307,7 @@
 
     <!--ABOUT US-->
 
-    <div class="mt-5 text-white " style="background-color: #101e4a;">
+    <div class="mt-5 text-white " style="background-color: #101e4a;" id="aboutUs">
         <div class="container-fluid p-5">
             <div class="row">
               <div class="col-5">
@@ -392,34 +454,55 @@
                        <h4 style="color:white;">SEND US A FEEDBACK</h4>
                   </div>
                <div class="container-fluid">
-                 <form class="m-0 p-2">
-                   
-                     <div class="row text-white">
-                         <div class="col-6">
-                             First Name
-                             <input type="text" class="form-control" placeholder="First Name" name="Fname">
-                         </div>
-                         <div class="col-6">
-                             Last Name
-                             <input type="text" class="form-control" placeholder="Last Name" name="Lname">
-                         </div>
-                     </div>
-                     <div class="row mt-3 text-white">
-                       <div class="col-6">
-                           Phone Number
-                           <input type="text" class="form-control" placeholder="Number" name="number">
-                       </div>
-                       <div class="col-6">
-                           e-mail
-                           <input type="text" class="form-control" placeholder="e-mail address" name="email">
-                       </div>
-                   </div>
-                   <div class="container mt-5 mb-5">
-                       <button type="button" class="btn btn-outline-light">Submit</button>
-                   </div>
-                 </form>
-               </div>
-             </div>
+                <form class="row g-2 needs-validation" style="color:white;" novalidate>
+                  <div class="col-md-6">
+                      <label for="validationCustom01" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="validationCustom01" required>
+                      <div class="valid-feedback">Looks good!</div>
+                      <div class="invalid-feedback">
+                        Please provide you First Name.
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="validationCustom02" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">
+                      Please provide you Last Name.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="validationCustom03"  required>
+                    <div class="invalid-feedback">
+                      Please provide a valid email.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom04" class="form-label">Contact Number</label>
+                    <input type="text-number" class="form-control" id="validationCustom04"  required>
+                    <div class="invalid-feedback">
+                      Please provide a valid contact number.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="form-check">
+                          <div class="container mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 mb-5" type="submit">SUBMIT FORM</button>
+              </form>
+            </div>
+            </div>
+
             </div>
               <div class="col-8 p-4 ">
                   <div class="container m-0 p-2 rounded  text-center" style="background-color: #ffdd4a;">
@@ -479,7 +562,7 @@
 
     <!---contact us-->
 
-    <div class="container-fluid p-5" style="color:white; background-color:white;" >
+    <div class="container-fluid m-0 p-5" style="color:white; background-color:white;" id="contact" >
         <div class="row">
             <div class="col-7 text-center d-flex" id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15421.353089980965!2d120.87053055947975!3d14.91823555424498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396552646a3050b%3A0xfa5575d920f147f5!2sMakinabang%2C%20Baliwag%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1684926483606!5m2!1sen!2sph" 
