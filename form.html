@@ -55,6 +55,11 @@
         color:#101e4a
       }
 
+      .nav-item:hover{
+        transform: scale(1.1);
+        border-radius: 10px;
+      }
+
       .input-group-append {
         cursor: pointer;
       }
@@ -96,29 +101,24 @@
 <nav class="navbar navbar-expand-sm sticky-top" style="background-color: #101e4a;">
   <div class="container-fluid">
     <a class="nav-link" href="form.html" style="color:#ffdd4a;">BOOK NOW</a>
-    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" href="https://paws.org.ph/adopt/" style="color:#ffdd4a;">START TO ADOPT/DONATE</a></li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
+          <a class="nav-link" href="index.html#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact" style="color:#ffdd4a;">CONTACT</a>
-        </li>    
+          <a class="nav-link" href="index.html#contact" style="color:#ffdd4a;">CONTACT</a>
+        </li>  
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
-        </li>
-      </ul>
+
+        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a> &nbsp;&nbsp;
+        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
     </div>
   </div>
 </nav>
