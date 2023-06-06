@@ -12,6 +12,7 @@
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <script src="myscripts.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 
   <title>Book Now </title>
 
@@ -63,48 +64,64 @@
         box-shadow: 0px 0px 5px black;
       }
 
-      
-    
+      .fa{
+        padding:5px;
+        width: 40px;
+        margin: 5px 2px;
+        text-decoration: none;
+        font-size: 30px;
+      }
 
+      .fa:hover{
+        transform: scale(1.3);
+      }
+
+      #map:hover{
+        transform: scale(1.02);
+      }
+    
       
     </style>
 </head>
 <body>
 
   <div class="p-3 text-white text-center">
-    <div class="img" >
-        <img src="LOGO.png" alt="Rocket Dog Logo" type="button" href="#" style="width:200px; height: 200px;">
+    <div class="img">
+        <img src="logo.png" alt="Rocket Dog Logo" type="button" href="index.html" style="width:200px; height: 200px;">
     </div>
   </div>
 
 <!---NAV BAR-->
 
-<nav class="navbar navbar-expand-sm sticky-top fw-bold" style="background-color: #101e4a; box-shadow: 1px 1px 3px black;">
+<nav class="navbar navbar-expand-sm sticky-top" style="background-color: #101e4a;">
   <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#myModal" style="color:#ffdd4a;">BOOK NOW</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://paws.org.ph/adopt/" style="color:#ffdd4a;">START TO ADOPT/DONATE</a></li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html#contact" style="color:#ffdd4a;">CONTACT</a>
-      </li>
-    </ul>
-    
-  <ul class="nav navbar-nav navbar-right">
-    <li class="nav-item">
-      <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
-    </li>
-  </ul>
+    <a class="nav-link" href="form.html" style="color:#ffdd4a;">BOOK NOW</a>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://paws.org.ph/adopt/" style="color:#ffdd4a;">START TO ADOPT/DONATE</a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" style="color:#ffdd4a;">CONTACT</a>
+        </li>    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-
 
 
 <!--form-->
@@ -301,7 +318,7 @@
             </div>
         
             <div>
-              <h3 style="color:#ffdd4a;">LIST OF REQUIREMENTS</h3>
+              <h3 style="color:#ffdd4a;">LIST OF REQUIREMENTS:</h3>
                 <div>
                     <div class="row">
                       <div class="col " id="reqBox" style="color:#ffdd4a;">
@@ -359,26 +376,53 @@
 
 <div class="container mx-auto " style="background-color:#101e4a" id="bgForm">
       <h1 class="p-2" style="color:#ffdd4a;">Pick a schedule</h1>
+      <div class="container row">
+          <div class="col-sm-6 text-center">
+            <form action="">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="originTextbox" placeholder="Enter Last Name" name="originTextbox" required>
+                <label for="originTextbox" class="form-label">Origin</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">
+                  Please enter your pet's pick-up address.
+                </div>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="destinationTestbox" placeholder="Enter Last Name" name="destinationTestbox" required>
+                <label for="destinationTestbox" class="form-label">Destination</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">
+                  Please enter your pet's destination.
+                </div>
+              </div><br>
+              <label for="birthday" style="color:#ffdd4a;">Intended travel date:</label>
+              <input type="date" id="birthday" name="birthday">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="col-sm-6 p-3 rounded" style="border:3px dashed #ffdd4a;">
+              <div>
+                  <form style="color:#ffdd4a;">
+                      <h4>Mode of payment:</h4>
+                      <input type="radio" id="cod" name="mop" value="cod">
+                      <label for="html">Cash on delivery</label><br>
+                      <input type="radio" id="creditDebit" name="mop" value="creditDebit">
+                      <label for="css">Credit/Debit Card</label><br>
+                      <input type="radio" id="payCenterEwallet" name="mop" value="payCenterEwallet">
+                      <label for="javascript">Payment Center / E-wallet</label><br>
+                      <input type="radio" id="onlineBanking" name="mop" value="onlineBanking">
+                      <label for="javascript">Online Banking</label>
+                  </form> 
+              </div>
+          </div>
+      </div>
+      <div class="d-grid mt-3">
+          <button class="btn btn-primary mt-3 mb-3" href="#demo" type="buton" data-bs-toggle="collapse" data-bs-toggle="#demo">SUBMIT DETAILS</button>
+      </div>
       
 </div>
 
 
-<section class="container">
-    <h2 class="mx-auto">Datepicker</h2>
-    <form class="row">
-        <label for="date" class="col-1 col-form-label">DATE</label>
-        <div class="col-5">
-            <div class="input-group date" id="datepicker">
-                <input type="text" class="form-control" id="date"/>
-                <span class="input-group-append">
-                  <span class="input-group-text bg-light d-block">
-                    <i class="fa fa-calendar"></i>
-                  </span>
-                </span>
-            </div>
-        </div>
-    </form>
-</section>
 <!---<div class="container-fluid mt-3">
       <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#addPetBtn">Add Pet</button>
   </div>
@@ -473,7 +517,7 @@
   <div class="container-fluid" style="color:#101e4a; background-color: #ffdd4a; box-shadow:0px 0px 10px black;" id="aboutUs">
     <div class="container row p-5 text-center">
         <div class="col-9">
-            <h1 style="text-shadow: 0px 0px 5px black;">LET'S END PET HOMELESSNESS!</h1>
+            <h1 style="text-shadow: 0px 0px 2px black;">LET'S END PET HOMELESSNESS!</h1>
         </div>
         <div class="col-3">
             <a type="button" class="btn btn-lg" href="https://paws.org.ph/adopt/" id="adoptNowBtn" style="background-color: #101e4a; color:#ffdd4a">ADDOPT NOW</a>
@@ -481,24 +525,24 @@
     </div>
 </div>
 
-  <!---contact us-->
+  <!---contact us
 
-  <div class="container-fluid rounded m-0 p-5" id="contact" >
+  <div class="container-fluid rounded m-0 p-5 d-flex" id="contact">
     <div class="row">
-        <div class="col-7 text-center d-flex" id="map">
+        <div class="col-7 text-center " id="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15421.353089980965!2d120.87053055947975!3d14.91823555424498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396552646a3050b%3A0xfa5575d920f147f5!2sMakinabang%2C%20Baliwag%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1684926483606!5m2!1sen!2sph" 
             width="700" height="550" style="border-radius:15px; border:10px solid; border-color:#101e4a;" allowfullscreen="" loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="col-5 text-center rounded" style="background-color: #101e4a; box-shadow: 0px 0px 5px black;">
-            <div class="container-fluid rounded" style="background-color: #ffdd4a; color:#101e4a">
+        <div class="col-5 text-center rounded " style="background-color: #101e4a; box-shadow: 0px 0px 5px black; overflow: auto;" id="contactPad">
+            <div class="container-fluid rounded" style="background-color: #ffdd4a; color:#101e4a;;">
                 <h4 class="mt-3 p-3">CONTACT US</h4>
                 <p class="mx-auto p-2">Got a question for the team? You can contact us through one 
                    of our channels below! You can also fill out the contact form 
                    to instantly send us an e-mail. Just don't forget to write down 
                    your contact details too!</p>
             </div>
-            <div class="container">
+            <div class="container" >
                 <div class="row mt-4" style="color:#ffdd4a;">
                     <div class="col-5">TALK TO US</div>
                     <div class="col-7">CONNECT WITH US</div>
@@ -507,7 +551,7 @@
                     <div class="col-5">
                         <div class="row mt-2">
                             <div class="col">
-                                <a href="#" style="color: #ffdd4a;" class="fa fa-envelope-o"></a>
+                                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" style="color: #ffdd4a;" class="fa fa-envelope-o"></a>
                             </div>
                             <div class="col">
                                 <a href="#" style="color: #ffdd4a;" class="fa fa-phone"></a>
@@ -517,7 +561,7 @@
                     <div class="col-7">
                         <div class="row mt-2">
                             <div class="col">
-                                <a href="#" style="color: #ffdd4a;" class="fa fa-facebook"></a>
+                                <a href="https://www.facebook.com/ninio.querol.7" style="color: #ffdd4a;" class="fa fa-facebook"></a>
                             </div>
                             <div class="col">
                                 <a href="#" style="color: #ffdd4a;" class="fa fa-twitter"></a>
@@ -541,10 +585,70 @@
             </div>
         </div>
     </div>
+</div>-->
+
+<div class="continer p-3" style="overflow: auto;">
+  <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15421.353089980965!2d120.87053055947975!3d14.91823555424498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396552646a3050b%3A0xfa5575d920f147f5!2sMakinabang%2C%20Baliwag%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1684926483606!5m2!1sen!2sph" 
+        style="border-radius:15px; border:10px solid; border-color:#101e4a; width:100%; height: 550px;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-12 text-center rounded" style="background-color: #101e4a; box-shadow: 2px 2px 5px black;">
+        <div class="container rounded" style="background-color: #ffdd4a; color:#101e4a">
+            <h4 class="mt-3 p-3">CONTACT US</h4>
+            <p class="mx-auto p-2">Got a question for the team? You can contact us through one 
+               of our channels below! You can also fill out the contact form 
+               to instantly send us an e-mail. Just don't forget to write down 
+               your contact details too!</p>
+        </div>
+        <div class="container">
+            <div class="row mt-4" style="color:#ffdd4a;">
+                <div class="col-5">TALK TO US</div>
+                <div class="col-7">CONNECT WITH US</div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <a href="#" style="color: #ffdd4a;" class="fa fa-envelope-o"></a>
+                        </div>
+                        <div class="col">
+                            <a href="#" style="color: #ffdd4a;" class="fa fa-phone"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <a href="#" style="color: #ffdd4a;" class="fa fa-facebook"></a>
+                        </div>
+                        <div class="col">
+                            <a href="#" style="color: #ffdd4a;" class="fa fa-twitter"></a>
+                        </div>
+                        <div class="col">
+                            <a href="#" style="color: #ffdd4a;" class="fa fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-5">
+                     <div class="mt-4  text-white " >
+                      <div class="container p-1 text-center">
+                          <h4 style="color:#ffdd4a">IN PARTNERSHIP WITH</h4>
+                          <img src="paws.png" alt="pawslogo">
+                          
+                      </div>  
+                  </div>
+                </div>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 
 <div class="container">
-  <h6 class="text-center mb-4 fw-bold">© 2019 Pet-Express. All Rights Reserved.</h6>
+<h5 class="text-center mb-4 fw-bold">© 2019 Pet-Express. All Rights Reserved.</h5>
 </div>
   
 
