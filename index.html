@@ -48,7 +48,7 @@
         background-color: white;
       }
 
-      #contentBox{
+      /*#contentBox{
         border-radius: 15px;
         background-color:  #ffdd4a;
         width: 300px;
@@ -56,9 +56,10 @@
         padding: 10px;
         margin: 5px;
         top: 10px;
-      }
+      }*/
       .nav-item:hover{
         transform: scale(1.1);
+        border-radius: 10px;
       }
 
       #getStartedBtn:hover{
@@ -107,7 +108,13 @@
       #map:hover{
         transform: scale(1.02);
       }
-      
+
+
+      .topnav {
+  overflow: hidden;
+  background-color: #101e4a;
+}
+
     </style>
 </head>
 <body>
@@ -120,24 +127,27 @@
         </div>
     </div>
 
-    <!---NAV BAR-->
+    <!---NAV BAR
 
-    <nav class="navbar navbar-expand-sm sticky-top fw-bold" style="background-color: #101e4a; box-shadow: 2px 2px 3px black;">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm sticky-top fw-bold"  style="overflow: hidden; background-color: #101e4a; box-shadow: 2px 2px 3px black;">
+        <div class="container-fluid topnav" >
+         
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="topnav">
               <a class="nav-link active" href="form.html" style="color:#ffdd4a;">BOOK NOW</a>
             </li>
-            <li class="nav-item">
+            <li class="topnav">
               <a class="nav-link" href="https://paws.org.ph/adopt/" style="color:#ffdd4a;">START TO ADOPT/DONATE</a></li>
-            <li class="nav-item">
+            <li class="topnav">
               <a class="nav-link" href="#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
             </li>
-            <li class="nav-item">
+            <li class="topnav">
               <a class="nav-link" href="#contact" style="color:#ffdd4a;">CONTACT</a>
             </li>
           </ul>
-          
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
             <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a>
@@ -146,7 +156,39 @@
             <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
           </li>
         </ul>
+        
+    </nav>-->
+
+    <nav class="navbar navbar-expand-sm sticky-top" style="background-color: #101e4a;">
+      <div class="container-fluid">
+        <a class="nav-link" href="form.html" style="color:#ffdd4a;">BOOK NOW</a>
+        <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://paws.org.ph/adopt/" style="color:#ffdd4a;">START TO ADOPT/DONATE</a></li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutUs" style="color:#ffdd4a;">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color:#ffdd4a;">CONTACT</a>
+            </li>    
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#LogInOffcanvas" style="color:#ffdd4a;">LOG-IN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#SignupOffcanvas" style="color:#ffdd4a;">SIGN-UP</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+
 
     <!--offcanvas-->
 
@@ -377,29 +419,33 @@
     </div>
 
     <!----why us-->
-    <div class="container-fluid p-5 m-0  color:white;" style="background-color: #101e4a; box-shadow: 2px 2px 10px;">
-        <H2 class="fw-bold d-block" style="text-align: center; margin-bottom: 40px; color:#ffdd4a;">WHY RocketDOG?</H2>
+
+    <div class="container-fluid p-5 m-0" style="background-color: #101e4a; box-shadow: 0px 2px 10px;">
+      <H2 class="fw-bold d-block" style="text-align: center; margin-bottom: 40px; color:#ffdd4a;">WHY RocketDOG?</H2>
         <div class="row">
-            <div class="col" style="text-align: center;"  id="contentBox" >
-                    <img src="HF.png" alt="thumbupsign" style="width: 100px; height: 100px; margin-top: 20px;">
-                    <h4 style="margin-top: 30px;">HASSLE FREE</h4>
-                    <p >With our experienced team, we'll make sure your pet enjoys a safe and comfortable 
-                       journey to their destination</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 text-center rounded mx-auto" style="width: 300px; height: 300px; background-color: #ffdd4a;" >
+                <img src="HF.png" alt="thumbupsign" style="width: 100px; height: 100px; margin-top: 20px;">
+                <h4 style="margin-top: 30px; color: #101e4a;">HASSLE FREE</h4>
+                <p style="color: #101e4a;">With our experienced team, we'll make sure your pet enjoys a safe and comfortable 
+                 journey to their destination.</p>  
             </div>
-            <div class="col" style="text-align: center;"  id="contentBox" >
-                <img src="affordable-icon.png" alt="affordablesign" style="width: 100px; height: 100px; margin-top: 20px;">
-                <h4 style="margin-top: 30px;">AFFORDABLE PRICES</h4>
-                <p >We offer competitive rates and all-in packages. Truly a bang for your buck!</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 text-center rounded mx-auto" style="width: 300px; height: 300px; background-color: #ffdd4a;" >
+              <div class="container rounded" style="overflow: auto;">
+                <img src="HF.png" alt="thumbupsign" style="width: 100px; height: 100px; margin-top: 20px;">
+                <h4 style="margin-top: 30px; color: #101e4a;">AFFORDABLE PRICES</h4>
+                <p style="color: #101e4a;">We offer competitive rates and all-in packages. Truly a bang for your buck!</p>
+              </div>
             </div>
-            <div class="col" style="text-align: center;"  id="contentBox" >
-                <img src="booking.png" alt="affordablesign" style="width: 100px; height: 100px; margin-top: 20px;">
-                <h4 style="margin-top: 30px;">SIMPLE BOOKING PROCESS</h4>
-                <p >Your pet will be on his way in no time with our simple 3 step booking process.</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 text-center rounded mx-auto" style="width: 300px; height: 300px; background-color: #ffdd4a;">
+              <img src="HF.png" alt="thumbupsign" style="width: 100px; height: 100px; margin-top: 20px;">
+                <h4 style="margin-top: 20px; color: #101e4a;">SIMPLE BOOKING PROCESS</h4>
+                <p style="color: #101e4a;">With our experienced team, we'll make sure your pet enjoys a safe and comfortable 
+                 journey to their destination.</p>
             </div>
-            <div class="col" style="text-align: center;"  id="contentBox" >
-                <img src="partner.png" alt="affordablesign" style="width: 100px; height: 100px; margin-top: 20px;">
-                <h4 style="margin-top: 30px;">PROFESSIONAL HANDLERS</h4>
-                <p >You can rest easy knowing our team is geared up for your furbabies any time, any where</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 text-center rounded mx-auto" style="width: 300px; height: 300px; background-color: #ffdd4a;">
+              <img src="HF.png" alt="thumbupsign" style="width: 100px; height: 100px; margin-top: 20px;">
+                <h4 style="margin-top: 30px; color: #101e4a;">PROFESSIONAL HANDLERS</h4>
+                <p style="color: #101e4a;">You can rest easy knowing our team is geared up for your furbabies any time, any where.</p> 
             </div>
         </div>
     </div>
@@ -409,7 +455,7 @@
     <div class="container-fluid m-0 " style="color:#101e4a;">
         <h2 style="text-align: center; font-weight: bold;" class="p-5">THE BOOKING PROCESS</h2>
         <div class="row">
-            <div class="col" style="text-align: center;">
+            <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;">
                 <img src="quote.png" alt="submit quotation" style="width:100px; height: 100px; ">
                 <h4 style="margin-top: 30px;">SUBMIT BOOKING</h4><br>
                 <p style="margin-left:50px; text-align: start;">Indicate basic information like the origin, 
@@ -417,14 +463,14 @@
                     specifics of your inquiry for a more accurate 
                     quotation.</p>
             </div>
-            <div class="col" style="text-align: center;">
+            <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;">
                 <img src="schedule.png" alt="submit quotation" style="width:100px; height: 100px;">
                 <h4 style="margin-top: 30px;">PICK A SCHEDULE</h4><br>
                 <p style="margin-left:50px; text-align: start;">Let us know the target travel schedule 
                     for your pet and we will be glad to give 
                     you options.</p>
             </div>
-            <div class="col" style="text-align: center;">
+            <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;">
               <img src="payment.png" alt="submit quotation" style="width:100px; height: 100px;">
               <h4 style="margin-top: 30px;">SETTLE PAYMENT</h4><br>
               <p style="margin-left:50px; text-align: start;">We got your pet's travel itinerary set. 
@@ -441,7 +487,7 @@
     <div class="mt-5" style="background-color: #101e4a; color:#ffdd4a; box-shadow: 2px 2px 10px black;" id="aboutUs">
         <div class="container-fluid p-5">
             <div class="row">
-              <div class="col-5">
+              <div class="col-md-5 col-sm-12" style="float:left;">
                 <h3 class="p-3 fw-bolder text-center">ABOUT US</h3>
                 <p class="text-center ">RocketDOG was established in 2023 by a group of pet lovers for pet lovers. 
                   During this period, transporting pets to provinces consisted of placing 
@@ -477,11 +523,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-7">
-                  <div class="d-flex container">
+              <div class="col-lg-7 col-sm-12">
+                  <div class="d-flex container" style="float:left;">
                       <img src="ourTeam.jpg" alt="Our Team" style="width:100%;" id="ourTeamImg">
-                  </div>
-                      <h2>Out Team</h2>
                   </div>
               </div>
             </div>
@@ -581,7 +625,7 @@
 
       <div class="container-fluid p-2">
           <div class="row">
-              <div class="col-4 p-4 text-center"> 
+              <div class="col-lg-4 col-md-6 col-sm-12 p-4 text-center"> 
                 <div class="container mt-3 p-2 rounded" style="border:5px solid; border-color: #ffdd4a; box-shadow: 2px 2px 10px;">
                   <div class="container mt-5 mb-5"> 
                        <h4 style="color:#ffdd4a;">SEND US A FEEDBACK</h4>
@@ -638,7 +682,7 @@
 
             <!--review carousel-->
             </div>
-              <div class="col-8 p-4 ">
+              <div class="col-md-8 col-sm-12 p-4 d-flex" style="overflow: auto;">
                   <div class="container m-0 p-2 rounded  text-center" style="background-color: #ffdd4a; box-shadow: 2px 2px 10px black;">
                         <div id="revCar" class="mx-auto carousel slide" data-bs-ride="carousel">
 
@@ -648,13 +692,13 @@
                                 <button type="button" data-bs-target="#revCar" data-bs-slide-to="2"></button>
                           </div>
 
-                            <div class="carousel-inner">
+                            <div class="carousel-inner" >
                                   <div class="carousel-item active">
                                       <img src="rev1.jpeg" alt="customer review" class="d-block rounded" style="width:100%; opacity: 50%; ">
                                       <div class="carousel-caption ">
                                         <img src="cust1.jpeg" class="rounded-circle position-absolute bottom-100 start-10 translate-middle-x" alt="custImg" id="custImg" style="width:200px; height:200px; border:10px solid; border-color:#101e4a;">
                                           <div class="container rounded p-2 row" style="background-color: #101e4a;">
-                                            <div class="col">
+                                            <div class="col" style="overflow: auto;">
                                                 <h5>Origin: Palayan City, Nueva Ecija</h5>
                                             </div>
                                             <div class="col">
@@ -722,7 +766,71 @@
       </div>
   </div>
 
-    <!---contact us-->
+  <div class="continer p-3" style="overflow: auto;">
+      <div class="row">
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15421.353089980965!2d120.87053055947975!3d14.91823555424498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396552646a3050b%3A0xfa5575d920f147f5!2sMakinabang%2C%20Baliwag%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1684926483606!5m2!1sen!2sph" 
+            style="border-radius:15px; border:10px solid; border-color:#101e4a; width:100%; height: 550px;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12 text-center rounded" style="background-color: #101e4a; box-shadow: 2px 2px 5px black;">
+            <div class="container rounded" style="background-color: #ffdd4a; color:#101e4a">
+                <h4 class="mt-3 p-3">CONTACT US</h4>
+                <p class="mx-auto p-2">Got a question for the team? You can contact us through one 
+                   of our channels below! You can also fill out the contact form 
+                   to instantly send us an e-mail. Just don't forget to write down 
+                   your contact details too!</p>
+            </div>
+            <div class="container">
+                <div class="row mt-4" style="color:#ffdd4a;">
+                    <div class="col-5">TALK TO US</div>
+                    <div class="col-7">CONNECT WITH US</div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="row mt-2">
+                            <div class="col">
+                                <a href="#" style="color: #ffdd4a;" class="fa fa-envelope-o"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" style="color: #ffdd4a;" class="fa fa-phone"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="row mt-2">
+                            <div class="col">
+                                <a href="#" style="color: #ffdd4a;" class="fa fa-facebook"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" style="color: #ffdd4a;" class="fa fa-twitter"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" style="color: #ffdd4a;" class="fa fa-instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5">
+                         <div class="mt-4  text-white " >
+                          <div class="container p-1 text-center">
+                              <h4 style="color:#ffdd4a">IN PARTNERSHIP WITH</h4>
+                              <img src="paws.png" alt="pawslogo">
+                              
+                          </div>  
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <h5 class="text-center mb-4 fw-bold">© 2019 Pet-Express. All Rights Reserved.</h5>
+  </div>
+
+    <!---contact us
 
     <div class="container-fluid rounded m-0 p-5" id="contact" >
         <div class="row">
@@ -783,13 +891,22 @@
             </div>
         </div>
     </div>
-    
+  -->
+
 
     
 
       
-  
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
